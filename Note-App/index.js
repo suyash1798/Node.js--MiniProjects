@@ -2,7 +2,10 @@ console.log("Starting App");
 
 const os = require('os');
 const fs = require('fs');
+const notes = require('./notes.js');
 
-var username = os.userInfo().username;
+console.log(notes.add(4,5));
 
-fs.appendFileSync('Greetings.txt',`Hi ${username}`);
+//var username = os.userInfo().username;
+//
+//fs.appendFileSync('Greetings.txt',`Hi ${username}`);
