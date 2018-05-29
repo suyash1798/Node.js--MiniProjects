@@ -7,7 +7,7 @@ const yargs = require('yargs');
 const notes = require('./notes.js');
 
 const argv = yargs.argv;
-var command = argv.[0];
+var command = argv._[0];
 console.log('Command: ',command);
 //console.log('Process', process.argv);
 console.log('yargs',argv);
