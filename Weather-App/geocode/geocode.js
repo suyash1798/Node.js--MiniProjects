@@ -5,6 +5,7 @@ var geocodeAddress = (address,callback) => {
     request(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}`,
         (error, res, body) => {
             if (error) {
+                console.log(error);
                 callback("Unable to connect to Internet", undefined);
             } else if (JSON.parse(body).status === 'OK') {
                 callback(undefined,{
